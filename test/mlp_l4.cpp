@@ -14,20 +14,20 @@ int main() {
     Model model = Model::create("mlp-l4");
 
     // Input
-    unsigned int in_size = 1024;
+    unsigned int in_size = 128;
     auto in = InputVector::create(model, "in", in_size);
 
     // Layer 1 configurations
     unsigned int in_size1 = in_size;
-    unsigned int out_size1 = 1024;
+    unsigned int out_size1 = 256;
 
     // Layer 2 configurations
     unsigned int in_size2 = out_size1;
-    unsigned int out_size2 = 2048;
+    unsigned int out_size2 = 512;
 
     // Layer 3 configurations
     unsigned int in_size3 = out_size2;
-    unsigned int out_size3 = 1024;
+    unsigned int out_size3 = 256;
 
     // Layer 4 configurations
     unsigned int in_size4 = out_size3;

@@ -15,7 +15,7 @@ for g in *.puma; do
     echo $g
     #Parse tile and core ids
     dataset="$( cut -d '-' -f 1 <<< "$g" )"
-    echo $dataset
+    #echo $dataset
     tileid=$(echo $g | grep -o -E 'tile[0-9]+' | head -1)
 
     if [[ $g == *"core"* ]]; then
