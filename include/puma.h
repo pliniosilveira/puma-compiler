@@ -18,7 +18,7 @@ struct CompilerOptions {
 
         GraphPartitioningScheme gp_ = GP_ROW_MAJOR;
         bool coalesceMVMOperations_ = true;
-        bool printDebugInfo_ = false;
+        bool printDebugInfo_ = true;
 
 };
 
