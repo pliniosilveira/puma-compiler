@@ -1,7 +1,7 @@
 # Copy this file to compiler test folder where the .npy files are generated.
 # Update SIMULATOR_PATH value and execute it.
 
-SIMULATOR_PATH="/home/marte/Desktop/puma-simulator" # simulator root path
+SIMULATOR_PATH="/home/marte/Desktop/git_fork/puma-simulator" # simulator root path
 
 if [[ $SIMULATOR_PATH == "" ]] ; then
     print "Error, missing simulator path."
@@ -59,20 +59,14 @@ echo $dataset
 cd $dataset
 $PYTHON input.py
 
-if [[ $1 == *"-s"* ]]; then 
-    cp $SIMULATOR_PATH/Security/Encryption/encryptall.py .
-    $PYTHON encryptall.py .
+if [[ $1 == *"-c"* ]]; then 
+    $PYTHON $SIMULATOR_PATH/Security/encrypter.py $2 $PWD
     rm -r tile*
 fi
 
 if [[ $1 == *"-a"*  ]]; then
-
-    cp $SIMULATOR_PATH/Security/Encryption/modelencrypt.py .
-    $PYTHON modelencrypt.py .
-    cp $SIMULATOR_PATH/Security/Encryption/encrypt.py .
-    $PYTHON encrypt.py input.npy
+    $PYTHON $SIMULATOR_PATH/Security/generateMAC.py $2 $PWD
 fi
-
 
 cd ..
 $PYTHON populate.py
