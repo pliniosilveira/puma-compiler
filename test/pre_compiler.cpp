@@ -1,12 +1,3 @@
-/*
- *  Copyright (c) 2019 IMPACT Research Group, University of Illinois.
- *  All rights reserved.
- *
- *  This file is covered by the LICENSE.txt license file in the root directory.
- *
- */
-
-
 
 #include <string>
 #include <vector>
