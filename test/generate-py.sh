@@ -1,7 +1,7 @@
 # Copy this file to compiler test folder where the .npy files are generated.
 # Update SIMULATOR_PATH value and execute it.
 
-SIMULATOR_PATH="INSERT PATH TO PUMA SIMULATOR HERE" # simulator root path
+SIMULATOR_PATH="/home/plinio/puma-simulator" # simulator root path
 
 if [[ $SIMULATOR_PATH == "" ]] ; then
     print "Error, missing simulator path."

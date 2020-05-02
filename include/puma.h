@@ -17,7 +17,7 @@ struct CompilerOptions {
         enum GraphPartitioningScheme { GP_ROW_MAJOR, GP_COL_MAJOR, GP_KAHIP, GP_RANDOM };
 
         GraphPartitioningScheme gp_ = GP_ROW_MAJOR;
-        bool coalesceMVMOperations_ = true;
+        bool coalesceMVMOperations_ = false;
         bool printDebugInfo_ = true;
 
 };
